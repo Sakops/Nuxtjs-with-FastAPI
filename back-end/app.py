@@ -88,8 +88,10 @@ def createUser(user: UserDTO):
 @app.put("/api/users/{id}")
 def updateUser(id: int, user: UserDTO):
     with db_session:
-        user = User(first_name=user.first_name,
-                    salary=user.salary, image=user.image)
+        user = User[id]
+        user.first_name = user.first_name
+        user.salary = user.salary
+        db.commit()
         if not user:
             raise HTTPException(status_code=status.HTTP_404_NOT_FOUND,
                                 detail=f"User with id of {id} not found")
