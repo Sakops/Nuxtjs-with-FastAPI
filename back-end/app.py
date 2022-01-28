@@ -9,7 +9,6 @@ from pydantic.dataclasses import dataclass
 from setuptools import Require
 from pony.orm import Database, PrimaryKey, Required, db_session, set_sql_debug
 from typing import Optional
-from fastapi.encoders import jsonable_encoder
 
 
 app = FastAPI()
