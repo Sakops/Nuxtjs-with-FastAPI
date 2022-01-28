@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "back-end"
+version = "0.1.0"
+description = ""
+authors = ["Samuel Darenskiy <samdarenskiy@protonmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+fastapi = "^0.72.0"
+uvicorn = "^0.17.0"
+pony = "^0.7.14"
+numpy = "^1.22.1"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
